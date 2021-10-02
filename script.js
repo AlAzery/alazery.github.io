@@ -1,6 +1,6 @@
 
 function get(){
-  window.location.href = "https://www.alazery.xyz/";
+  window.location.href = "profile/";
 }
 $(document).ready(function(){
     $(window).scroll(function(){
