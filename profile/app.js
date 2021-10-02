@@ -1,7 +1,7 @@
 const shareData = {
     title: 'AL AZERY',
     text: "AlAzery",
-    url: 'https://alazery.github.io/'
+    url: 'https://alazery.github.io/profile/'
   }
 
   const btn = document.querySelector('#share');
