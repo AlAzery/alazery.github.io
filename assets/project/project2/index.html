@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>copy to cliboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(219deg, #6968d6, #9402b3);
+    }
+    #text {
+      background-color: #f1f5fc;
+      font-weight: 400;
+      color: #3f415f;
+      border-radius: 5px;
+    }
+    button {
+      border: 2px solid #354dfb;
+      border-radius: 4px;
+      background-color: #accbdb;
+    }
+    h3 {
+      font-size: 30px;
+      color: #ffffff;
+    }
+    textarea {
+      background: #b2f0f0;
+      border-radius: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h3>COPY TO CLIPBOARD</h3>
+    <hr />
+    <div class="main">
+      <p id="alertA" style="display:none;color:#4dfd4d;">
+        copy clipboard
+      </p>
+      <input type="text" id="text" value="https://github.com/alazery" />
+      <button type="submit" onclick="copy()">copy</button>
+      <br />
+      <br />
+      <textarea rows="8" cols="40" id="textarea" disabled></textarea>
+    </div>
+    <br />
+    <br />
+    <hr />
+  </center>
+  <script>
+    function copy() {
+      var input = document.getElementById("text");
+      input.select();
+      if (document.execCommand("copy")) {
+        document.getElementById("textarea").innerHTML = input.value;
+        document.getElementById("alertA").style.display = "block";
+
+      }
+    }
+  </script>
+</body>
+</html>
