@@ -1,0 +1,491 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    color: #333f;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar .container {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+/* .nav-left{
+    flex: 1;
+}
+
+.nav-right{
+    flex: 1;
+} */
+
+.nav-left a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-right a {
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    color: #6e6e6e;
+}
+
+main {
+    display: none;
+}
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color:  white;
+}
+
+.home .container{
+    width: 70%;
+    text-align: center;
+}
+
+
+
+.home h1{
+    font-family: 'Orbitron', serif;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.home h6{
+    padding: 10px;
+    font-family: 'Titillium Web', serif;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* About */
+.about{
+    height: 100vh;
+    background-color: white;
+}
+
+.about .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about .container .card {
+    background-color: white;
+    text-align: center;
+    width: 40rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.178);
+    padding: 10px;
+    margin-top: 10px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.about .container .card:hover{
+    margin-top: 0px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356); 
+}
+
+.card img{
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0px 20px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}
+
+.card .content{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.card h2{
+    font-family: 'Montserrat', serif;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-family: 'Titillium Web', serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.card ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.card ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Skills and Portfolio */
+.skills{
+    height: auto;
+    background-color: white;
+}
+
+.skills .container{
+    flex-wrap: wrap;
+}
+
+.skills h2{
+    font-family: 'Montserrat', serif;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #333;
+}
+
+.skills ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.skills ul li{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    list-style: none;
+    padding: 3px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tooltip{
+    font-family: 'Montserrat', serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0;
+    transition: opacity 1s;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+
+.skills ul .laravel:hover, .skills ul .laravel:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    color: rgb(255, 16, 16);
+}
+.skills ul .css:hover, .skills ul .css:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    color: rgb(0, 123, 255);
+}
+.skills ul .js:hover, .skills ul .js:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    color: rgb(255, 223, 0);
+}
+.skills ul .html:hover, .skills ul .html:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    color: rgb(255, 72, 27);
+}
+.skills ul .bootstrap:hover, .skills ul .bootstrap:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    color: rgb(0, 123, 255);
+}
+.skills ul .php:hover, .skills ul .php:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+    color: rgb(79, 93, 149);
+}
+
+.skills ul li i{
+    font-size: 3rem;
+}
+
+/* Project */
+.skills .project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.skills .project .row{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills .project .row .col{
+    width: 300px;
+    margin-top: 20px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.project .col a{
+    text-decoration: none;
+    font-family: 'Montserrat', serif;
+    color: #333;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.project .col a:hover{
+    color: rgb(40, 132, 252);
+}
+
+.project .col p{
+    font-family: 'Titillium Web', serif;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* contact */
+
+.contact {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact button {
+    max-width: 40%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    color: #333f;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-right a {
+    color: #333;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    color: #6e6e6e;
+}
+
+/* Scroll bar style */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Alert */
+
+.alert {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+
+@media screen and (max-width: 768px){
+    .home h1{
+        font-size: 2.1rem;
+    }
+
+    .home h6{
+        font-size: 1rem;
+    }
+
+    .about .container .card {
+        width: 90%;
+    }
+
+    .skills .project .row .col{
+        width: 90%;
+    }
+
+    .skills .project .row{
+        width: 90%;
+    }
+    
+    .contact .container {
+        padding: 0 10px;
+    }
+
+    .contact form {
+        gap: 15px;
+    }
+
+    .contact button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
